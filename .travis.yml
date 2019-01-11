@@ -1,0 +1,9 @@
+language: bash
+
+services:
+  - docker
+
+script:
+  - docker build -t hello .
+  - docker images
+  - docker run hello
