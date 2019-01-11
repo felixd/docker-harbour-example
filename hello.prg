@@ -1,3 +1,5 @@
 PROCEDURE Main
-    ? "Hello World!"
-    
+    CLS()
+    ? "+--------------+"
+    ? "| Hello World! |"
+    ? "+--------------+"
