@@ -1,4 +1,4 @@
-FROM elmarit/harbour:3.4 as build
+FROM elmarit/harbour:3.4 as builder
 
 WORKDIR /app
 RUN git clone --depth=1 https://gitlab.com/felixd/harbour-restful.git /app
