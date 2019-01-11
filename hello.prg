@@ -1,5 +1,5 @@
 PROCEDURE Main
-    CLS()
+    ft_CLS()
     ? "+--------------+"
     ? "| Hello World! |"
     ? "+--------------+"
