@@ -4,7 +4,6 @@ services:
   - docker
 
 script:
-  - docker build -t example .
+  - docker build -t hello .
   - docker images
-  - docker run example
-  
+  - docker run hello
