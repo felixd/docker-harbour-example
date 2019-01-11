@@ -7,5 +7,5 @@ RUN hbmk2 restful.hbm
 FROM alpine:latest  
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
-COPY --from=builder /app .
-CMD ["./restful"]  
+COPY --from=builder /app/wsRestFul .
+CMD ["./wsRestFul"]  
