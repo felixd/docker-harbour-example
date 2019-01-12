@@ -5,7 +5,7 @@ services:
 
 stages: 
   - hello
-  - restful
+  - restful-34
   - restful-32
 
 jobs:
