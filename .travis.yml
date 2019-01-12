@@ -28,10 +28,11 @@ jobs:
         
     - stage: restful-32
       name: "RESTful on Harbour 3.2"
-      allow_failures: 
-        script:
-          - docker build -t restful restful-32/
-          - docker run -d --rm -p 8002:8002 restful
-          - docker ps
-          - curl http://localhost:8002/v1/statusType -v
-          - docker images
+      script:
+        - docker build -t restful restful-32/
+        - docker run -d --rm -p 8002:8002 restful
+        - docker ps
+        - curl http://localhost:8002/v1/statusType -v
+        - docker images
+  allow_failures: 
+    - stage: restful-32
