@@ -12,7 +12,7 @@ docker images
 docker run hello
 ```
 
-## Docker
+## Harbour Project on Docker
 
 [![Build Status](https://travis-ci.org/felixd/docker-harbour.svg?branch=master)](https://travis-ci.org/felixd/docker-harbour)
 
