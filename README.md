@@ -24,8 +24,8 @@ docker run hello
 https://github.com/rafathefull/restful
 
 ```bash
-docker build -t restful-34 restful-34/
-docker run -d --rm -p 8002:8002 restful-34
+docker build -t restful restful-34/
+docker run -d --rm -p 8002:8002 restful
 docker ps
 curl http://localhost:8002/v1/statusType -v
 docker images
