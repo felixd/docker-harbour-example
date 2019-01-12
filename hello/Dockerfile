@@ -1,5 +1,5 @@
 FROM elmarit/harbour:3.4 as builder
-COPY ./hello /src
+COPY . /src
 WORKDIR /src
 RUN hbmk2 -fullstatic hello.prg
 

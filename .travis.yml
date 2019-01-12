@@ -1,11 +1,27 @@
+os: linux
 language: bash
-
 services:
   - docker
 
-script:
-  - docker build -t hello ./hello/
-  - docker run hello
-  - docker build -t restful ./restful/
-  - docker images
+stages: 
+  - hello
+  - restful
+
+jobs:
+  include:
+    - stage: hello
+      name: "Hello World"
+      script: 
+        - docker build -t hello hello/
+        - docker run hello
+        - docker images
   
+    - stage: restful
+      name: "Harbour RESTful"
+      script: 
+        - docker build -t restful restful/
+        - docker run -d --rm -p 8002:8002 restful
+        - docker ps
+        - curl http://localhost:8002/
+        - docker images
+
