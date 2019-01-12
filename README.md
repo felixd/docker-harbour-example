@@ -19,13 +19,13 @@ docker images
 docker run hello
 ```
 
-### Harbour RESTful
+### RESTful on Harbour 3.4
 
 https://github.com/rafathefull/restful
 
 ```bash
-docker build -t restful restful/
-docker run -d --rm -p 8002:8002 restful
+docker build -t restful-34 restful-34/
+docker run -d --rm -p 8002:8002 restful-34
 docker ps
 curl http://localhost:8002/v1/statusType -v
 docker images

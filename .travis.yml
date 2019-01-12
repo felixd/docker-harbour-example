@@ -17,10 +17,10 @@ jobs:
         - docker run hello
         - docker images
   
-    - stage: restful
-      name: "Harbour RESTful"
+    - stage: restful-34
+      name: "RESTful on Harbour 3.4"
       script: 
-        - docker build -t restful restful/
+        - docker build -t restful restful-34/
         - docker run -d --rm -p 8002:8002 restful
         - docker ps
         - curl http://localhost:8002/v1/statusType -v
@@ -30,7 +30,7 @@ jobs:
       name: "RESTful on Harbour 3.2"
       allow_failures: 
         script:
-          - docker build -t restful restful/
+          - docker build -t restful restful-32/
           - docker run -d --rm -p 8002:8002 restful
           - docker ps
           - curl http://localhost:8002/v1/statusType -v
