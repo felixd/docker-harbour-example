@@ -1,9 +1,39 @@
+os: linux
 language: bash
-
 services:
   - docker
 
-script:
-  - docker build -t hello .
-  - docker images
-  - docker run hello
+stages: 
+  - hello
+  - restful-34
+  - restful-32
+
+jobs:
+  include:
+    - stage: hello
+      name: "Hello World"
+      script: 
+        - docker build -t hello hello/
+        - docker run hello
+        - docker images
+  
+    - stage: restful-34
+      skip_cleanup: true
+      name: "RESTful on Harbour 3.4"
+      script: 
+        - docker build -t restful restful-34/
+        - docker run -d --rm -p 8002:8002 restful
+        - docker ps
+        - curl http://localhost:8002/v1/statusType -v
+        - docker images
+        
+    - stage: restful-32
+      name: "RESTful on Harbour 3.2"
+      script:
+        - docker build -t restful restful-32/
+        - docker run -d --rm -p 8002:8002 restful
+        - docker ps
+        - curl http://localhost:8002/v1/statusType -v
+        - docker images
+  allow_failures: 
+    - stage: restful-32

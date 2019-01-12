@@ -1,6 +1,6 @@
-FROM elmarit/harbour:3.4 as builder
+FROM elmarit/harbour:3.2 as builder
+COPY . /src
 WORKDIR /src
-RUN git clone --depth=1 https://github.com/felixd/docker-harbour-example.git /src
 RUN hbmk2 -fullstatic hello.prg
 
 FROM alpine:latest 
