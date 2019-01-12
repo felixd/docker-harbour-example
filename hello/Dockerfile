@@ -1,4 +1,4 @@
-FROM elmarit/harbour:3.4 as builder
+FROM elmarit/harbour:3.2 as builder
 COPY . /src
 WORKDIR /src
 RUN hbmk2 -fullstatic hello.prg
