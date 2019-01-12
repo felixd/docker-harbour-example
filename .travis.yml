@@ -18,6 +18,7 @@ jobs:
         - docker images
   
     - stage: restful-34
+      skip_cleanup: true
       name: "RESTful on Harbour 3.4"
       script: 
         - docker build -t restful restful-34/
