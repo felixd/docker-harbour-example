@@ -4,6 +4,8 @@ services:
   - docker
 
 script:
-  - docker build -t hello .
-  - docker images
+  - docker build -t hello ./hello/
   - docker run hello
+  - docker build -t restful ./restful/
+  - docker images
+  
