@@ -24,4 +24,3 @@ jobs:
         - docker ps
         - curl http://localhost:8002/v1/statusType -v
         - docker images
-
