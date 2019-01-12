@@ -22,6 +22,6 @@ jobs:
         - docker build -t restful restful/
         - docker run -d --rm -p 8002:8002 restful
         - docker ps
-        - curl http://localhost:8002/
+        - curl http://localhost:8002/v1/statusType -v
         - docker images
 

@@ -5,5 +5,5 @@ RUN hbmk2 -fullstatic restful.hbm
 
 FROM ubuntu:latest 
 WORKDIR /app
-COPY --from=builder /src/wsRestFul .
+COPY --from=builder /src/wsRestFul /src/status.* ./
 CMD ["./wsRestFul"]  
