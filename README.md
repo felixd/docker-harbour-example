@@ -4,6 +4,21 @@
 
 Examples of Harbour Project (xBase compiler) on Docker
 
+## Docker Images for application binaries
+
+All binaries are run on [Google "Distroless" Docker Images](https://github.com/GoogleContainerTools/distroless). **static:latest** image is used.
+
+```bash
+Image size comparison:
+
+alpine                     latest              3f53bb00af94        3 weeks ago         4.41MB
+gcr.io/distroless/static   latest              06f8d4161170        49 years ago        1.81MB
+gcr.io/distroless/base     latest              dab6c8cba81d        49 years ago        16.9MB
+```
+
+* [Read more](https://github.com/GoogleContainerTools/distroless/tree/master/base) about Google `static` **(suggested image)** and `base` images
+* [Read more](https://hub.docker.com/_/alpine) about Alpine Linux on Docker
+
 ## Examples
 
 ```bash
