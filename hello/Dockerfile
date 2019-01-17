@@ -3,7 +3,7 @@ COPY . /src
 WORKDIR /src
 RUN hbmk2 -fullstatic hello.prg
 
-FROM alpine:latest 
+FROM gcr.io/distroless/static:latest AS binary
 WORKDIR /app
 COPY --from=builder /src/hello .
 CMD ["./hello"]  
