@@ -57,3 +57,9 @@ https://github.com/felixd/docker-harbour
 ## Authors
 
 * Paweł 'felixd' Wojciechowski : [Outsourcing IT - Konopnickiej.Com](https://konopnickiej.com)
+
+## Donations & Support
+
+If You would like to support this project:
+
+* **BTC**: bc1qe4clvflldgqw5s9y0yn3lm99lz9yf9mn4x3zfe
